@@ -32,6 +32,11 @@ struct PlanetImage: View {
             }
             Spacer()
         }
+        .onAppear(){
+            if imageLoader.image == nil {
+                imageLoader.loadImage(url: imageURL!)
+            }
+        }
 
     }
 }
